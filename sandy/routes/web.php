@@ -18,3 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/addsandy', 'AssistantController@formAdd');
+// addassistant
+Route::post('addassistant','AssistantController@postAdd')->name('addassistant');
