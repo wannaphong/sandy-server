@@ -11,3 +11,6 @@ php artisan migrate
 php artisan make:Controller
 
 php artisan make:model
+
+Admin
+ทำตาม https://www.tutsmake.com/laravel-6-multiple-authentication-system-example-tutorial/

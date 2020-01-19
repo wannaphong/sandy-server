@@ -10,7 +10,7 @@ class AssistantController extends Controller
     //
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('admin');
     }
     public function formAdd(){
         return view("add");
