@@ -19,7 +19,7 @@ class AssistantController extends Controller
         $model=$req->input("model");
         $key=Str::uuid()->toString();
         $data=array('model'=>$model,'key'=>$key,'created_at'=>now(),'updated_at'=>now());
-        $add= Assistant::addAssistant($data);
+        Assistant::addAssistant($data);
 
         return redirect("home");
     }

@@ -19,6 +19,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/addsandy', 'AssistantController@formAdd');
+Route::get('/addsandy', 'AssistantController@formAdd')->name('addsandy');
+Route::post('/savesandy', 'UserAssistantController@postAdd')->name('saveregsandy');
+#saveregsandy
+
+Route::get('/regsandy', 'UserAssistantController@formAdd')->name('regsandy');
 // addassistant
 Route::post('addassistant','AssistantController@postAdd')->name('addassistant');
