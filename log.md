@@ -9,3 +9,5 @@ php artisan make:migration create_assistant_table
 php artisan migrate
 
 php artisan make:Controller
+
+php artisan make:model
