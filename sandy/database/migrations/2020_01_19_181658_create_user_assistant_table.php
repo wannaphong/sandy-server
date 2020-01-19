@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAssistantTable extends Migration
+class CreateUserAssistantTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateAssistantTable extends Migration
      */
     public function up()
     {
-        Schema::create('assistant', function (Blueprint $table) {
-            $table->bigIncrements('assistantid');
-            $table->uuid('key');
-            $table->string('model');
+        Schema::create('user_assistant', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->integer('userid');
+            $table->integer('assistantid');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateAssistantTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('assistant');
+        Schema::dropIfExists('user_assistant');
     }
 }

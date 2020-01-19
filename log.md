@@ -6,3 +6,4 @@
 
 php artisan make:model Assistant
 php artisan make:migration create_assistant_table
+php artisan migrate
