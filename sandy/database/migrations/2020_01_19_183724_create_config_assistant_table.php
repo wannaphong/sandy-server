@@ -16,6 +16,14 @@ class CreateConfigAssistantTable extends Migration
         Schema::create('config_assistant', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('assistantid');
+            $table->integer('house_number')->nullable();
+            $table->integer('alley')->nullable();
+            $table->integer('village')->nullable();
+            $table->string('subdistrict')->nullable();
+            $table->string('district')->nullable();
+            $table->string('province')->nullable();
+            $table->string('linenotify')->nullable();
+            $table->string('wifi_config')->nullable();
             $table->timestamps();
         });
     }
