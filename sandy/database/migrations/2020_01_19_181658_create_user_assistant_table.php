@@ -17,6 +17,7 @@ class CreateUserAssistantTable extends Migration
             $table->bigIncrements('id');
             $table->integer('userid');
             $table->integer('assistantid');
+            $table->string('name');
             $table->timestamps();
         });
     }
