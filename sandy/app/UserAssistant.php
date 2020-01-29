@@ -11,6 +11,10 @@ class UserAssistant extends Model
     public static function get_all($uid){
         return DB::table('user_assistant')->where('userid', '=', $uid)->get();
     }
+    public static function del($assistantid){
+        return DB::table('user_assistant')->where('assistantid', '=', $assistantid)->delete();
+        //return DB::table('config_assistant')->where('assistantid', '=', $assistantid)->delete();
+    }
     public static function find_aid($code){
         return DB::table('assistant')->where('key', '=', $code)->first()->assistantid;
     }
@@ -22,6 +26,10 @@ class UserAssistant extends Model
         else{
             return false;
         }
+    }
+    public static function regAssistantConfig($data){
+        return DB::table('config_assistant')
+        ->insert($data);
     }
     public static function regAssistant($data){
         return DB::table('user_assistant')

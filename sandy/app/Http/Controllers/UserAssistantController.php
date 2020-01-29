@@ -27,13 +27,20 @@ class UserAssistantController extends Controller
         if(UserAssistant::check($assistantid)){
             $data=array('userid'=>$userid,'assistantid'=>$assistantid,'name'=>$name,'created_at'=>now(),'updated_at'=>now());
             UserAssistant::regAssistant($data);
+            UserAssistant::regAssistantConfig(array('assistantid'=>$assistantid));
         }
 
-        return redirect("home");
+        return redirect("viewsandy");
     }
     public function viewall(){
         $userid=auth()->user()->id;
         $assistantall=UserAssistant::get_all($userid);
         return view('listsandy',['products'=>$assistantall]);
+    }
+    public function Del($ua){
+        //dd($ua);
+        UserAssistant::del($ua);
+
+        return redirect("viewsandy");
     }
 }

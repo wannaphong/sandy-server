@@ -18,6 +18,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://earthchie.github.io/jquery.Thailand.js/jquery.Thailand.js/dependencies/JQL.min.js"></script>
+    <script type="text/javascript" src="https://earthchie.github.io/jquery.Thailand.js/jquery.Thailand.js/dependencies/typeahead.bundle.js"></script>
+    <link rel="stylesheet" href="https://earthchie.github.io/jquery.Thailand.js/jquery.Thailand.js/dist/jquery.Thailand.min.css">
+    <script type="text/javascript" src="https://earthchie.github.io/jquery.Thailand.js/jquery.Thailand.js/dist/jquery.Thailand.min.js"></script>
 </head>
 <body>
     <div id="app">
@@ -87,5 +92,20 @@
             @yield('content')
         </main>
     </div>
+    <script type="text/javascript">
+        $.Thailand({
+    $district: $('#subdistrict'), // input ของตำบล
+    $amphoe: $('#district'), // input ของอำเภอ
+    $province: $('#province'), // input ของจังหวัด
+    onDataFill: function(data){
+                console.info('Data Filled', data);
+            },
+
+            onLoad: function(){
+                console.info('Autocomplete is ready!');
+                $('#loader, .demo').toggle();
+            }
+});
+</script>
 </body>
 </html>

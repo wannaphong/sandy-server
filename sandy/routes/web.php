@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::get('/delassistant/{ua}','UserAssistantController@Del');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -26,5 +27,7 @@ Route::post('/savesandy', 'UserAssistantController@postAdd')->name('saveregsandy
 Route::get('/regsandy', 'UserAssistantController@formAdd')->name('regsandy');
 // view
 Route::get('/viewsandy', 'UserAssistantController@viewall')->name('viewsandy');
+Route::get('/configassistant/{aid}', 'ConfigController@form');
 // addassistant
 Route::post('addassistant','AssistantController@postAdd')->name('addassistant');
+Route::post('updateassistant','ConfigController@updateData')->name('updateassistant');

@@ -20,8 +20,8 @@
                             @foreach($products as $ls)
                           <tr>
                             <th scope="row">{{$ls->name}}</th>
-                            <td><button type="button" class="btn btn-warning">{{$ls->id}}</button></td>
-                            <td><button type="button" class="btn btn-danger">{{$ls->id}}</button></td>
+                            <td><a href="./configassistant/{{$ls->assistantid}}"><button type="button" class="btn btn-warning">ปรับแต่งการตั้งค่า</button></a></td>
+                            <td><a href="./delassistant/{{$ls->id}}"><button type="button" class="btn btn-danger">ลบ</button></a></td>
                           </tr>
                           @endforeach
                         </tbody>
