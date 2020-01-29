@@ -10,10 +10,7 @@ class ConfigController extends Controller
     //
 
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+
     public static function getid($key){
         return DB::table('assistant')->where('key', '=', $key)->first()->assistantid;
     }
