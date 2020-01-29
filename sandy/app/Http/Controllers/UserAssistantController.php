@@ -34,5 +34,6 @@ class UserAssistantController extends Controller
     public function viewall(){
         $userid=auth()->user()->id;
         $assistantall=UserAssistant::get_all($userid);
+        return view('listsandy',['products'=>$assistantall]);
     }
 }

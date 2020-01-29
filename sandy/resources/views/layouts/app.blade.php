@@ -58,6 +58,9 @@
                                     <a class="dropdown-item" href="{{ route('regsandy') }}">
                                         ลงทะเบียนเจ้าแสนดี
                                     </a>
+                                    <a class="dropdown-item" href="{{ route('viewsandy') }}">
+                                        สินค้าที่ลงทะเบียน
+                                    </a>
                                     @if(auth()->user()->role=="admin")
                                     <a class="dropdown-item" href="{{ route('addsandy') }}">
                                         เพิ่มสินค้าแสนดี

@@ -21,8 +21,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/addsandy', 'AssistantController@formAdd')->name('addsandy');
 Route::post('/savesandy', 'UserAssistantController@postAdd')->name('saveregsandy');
-#saveregsandy
+//saveregsandy
 
 Route::get('/regsandy', 'UserAssistantController@formAdd')->name('regsandy');
+// view
+Route::get('/viewsandy', 'UserAssistantController@viewall')->name('viewsandy');
 // addassistant
 Route::post('addassistant','AssistantController@postAdd')->name('addassistant');

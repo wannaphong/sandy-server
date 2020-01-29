@@ -20,8 +20,8 @@
                             @foreach($products as $ls)
                           <tr>
                             <th scope="row">{{$ls->name}}</th>
-                            <td>{{$ls->id}}</td>
-                            <td>{{$ls->id}}</td>
+                            <td><button type="button" class="btn btn-warning">{{$ls->id}}</button></td>
+                            <td><button type="button" class="btn btn-danger">{{$ls->id}}</button></td>
                           </tr>
                           @endforeach
                         </tbody>
