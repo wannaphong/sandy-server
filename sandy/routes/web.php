@@ -31,3 +31,10 @@ Route::get('/configassistant/{aid}', 'ConfigController@form');
 // addassistant
 Route::post('addassistant','AssistantController@postAdd')->name('addassistant');
 Route::post('updateassistant','ConfigController@updateData')->name('updateassistant');
+
+// api
+
+Route::get('/api/getid/{key}', 'ConfigController@getid');
+Route::get('/api/getprovince/{key}', 'ConfigController@getprovince');
+Route::get('/api/getlinenotify/{key}', 'ConfigController@getlinenotify');
+Route::get('/api/getdistrict/{key}', 'ConfigController@getdistrict');
